@@ -1,0 +1,150 @@
+{
+  "calculators": [
+    {
+      "id": "lifeline",
+      "name": "Lifeline Calculator",
+      "modalInputs": [
+        { "id": "retirementAge", "label": "Retirement Age", "type": "number", "unit": "Years" },
+        { "id": "currentMonthlyExpense", "label": "Current Monthly Expense", "type": "currency" }
+      ],
+      "headers": [
+        "Name", "Occupation", "DOB/Age", "Gender", "Marital Status", "Dependants"
+      ],
+      "output": {
+        "type": "tableWithCards",
+        "table": {
+          "columns": ["Age Slots", "Monthly Expense"]
+        },
+        "cards": [
+          { "label": "Desired Age of Retirement", "key": "retirementAge" },
+          { "label": "Future Monthly Expense*", "key": "futureMonthlyExpense" },
+          { "label": "Future Corpus Required**", "key": "futureCorpus" }
+        ]
+      },
+      "notes": [
+        "*Future Monthly Expense calculation considers a 7% inflation rate",
+        "**Future Corpus calculation is based on a 6% rate of return"
+      ]
+    },
+    {
+      "id": "salarySaving",
+      "name": "Salary Saving Calculator",
+      "modalInputs": [
+        { "id": "rate", "label": "Rate (%)", "type": "percent" },
+        { "id": "nominal", "label": "Nominal (%)", "type": "percent" },
+        { "id": "monthlySalary", "label": "Monthly Salary", "type": "currency" },
+        { "id": "savingsRate", "label": "Savings Rate (%)", "type": "percent" },
+        { "id": "salaryGrowth", "label": "Salary Growth (%)", "type": "percent" },
+        { "id": "calculateUptoAge", "label": "Calculate Upto Age", "type": "number" }
+      ],
+      "output": {
+        "type": "table",
+        "columns": [
+          "Age", "Salary", "Annual Salary", "Needs 50%", "Wants 30%", "Savings 20%", "Saving Corpus"
+        ]
+      },
+      "notes": ["Show total sums for Needs, Wants, Savings at the bottom row"]
+    },
+    {
+      "id": "swp",
+      "name": "SWP Calculator",
+      "modalInputs": [
+        { "id": "investmentAmount", "label": "Investment Amount (₹)", "type": "currency" },
+        { "id": "returnRate", "label": "Return (%)", "type": "percent" },
+        { "id": "withdrawalAmount", "label": "Withdrawal (₹)", "type": "currency" },
+        { "id": "expectedRate", "label": "Expected Rate (%)", "type": "percent" }
+      ],
+      "output": {
+        "type": "dualTable",
+        "tables": [
+          {
+            "columns": ["Years", "Total Withdrawal (₹)", "Net Worth (₹)"],
+            "rows": [5, 10, 15, 20]
+          },
+          {
+            "columns": ["Months", "Monthly Amount", "Value", "Net Worth"],
+            "rows": 240
+          }
+        ]
+      }
+    },
+    {
+      "id": "cashSurplus",
+      "name": "Cash Surplus Tracker",
+      "modalInputs": [
+        { "id": "cashIn", "label": "Cash Comes In (Salary + Other)", "type": "currency" }
+      ],
+      "formFields": [
+        "Insurance Premium (Monthly Average)",
+        "Current Ongoing Savings (Monthly Average)",
+        "Loan - EMI (Home, Vehicle, Personal, etc)",
+        "House Rent / Maintenance",
+        "Electricity Bills",
+        "Telephone Bills / Wifi",
+        "Ration, Grocery and LPG",
+        "Medicine",
+        "Education/Tuition fees",
+        "Vehicle Maintenance / Petrol",
+        "House help",
+        "Religious/Social cause",
+        "Entertainment/Leisure",
+        "Club membership fees",
+        "Travel / Petty cash / Miscellaneous"
+      ],
+      "cards": ["Cash In", "Cash Out", "Cash Surplus"],
+      "checkboxes": [
+        "Don't Have Cash Surplus",
+        "Have Cash Surplus",
+        "Have Negative Cash Surplus"
+      ],
+      "observations": [
+        "Monthly average Insurance Premium",
+        "Monthly Savings Contribution",
+        "Monthly Loan EMI",
+        "Monthly Expense (All Others)"
+      ]
+    },
+    {
+      "id": "projection70",
+      "name": "70 Year Projection Calculator",
+      "modalInputs": [
+        { "id": "lumpsum", "label": "Lumpsum Investment (₹)", "type": "currency" },
+        { "id": "ror", "label": "Rate of Return (%)", "type": "percent" },
+        { "id": "nominalRate", "label": "Nominal Rate (%)", "type": "percent" },
+        { "id": "monthlyInvestment", "label": "Monthly Investment (₹)", "type": "currency" },
+        { "id": "startYear", "label": "Start Year", "type": "number" },
+        { "id": "endYear", "label": "End Year", "type": "number" }
+      ],
+      "output": {
+        "type": "table",
+        "columns": [
+          "No of Year", "SIP Amount", "Investment", "Withdrawal",
+          "SIP Value in a Year", "Net Wealth", "Year"
+        ],
+        "rows": 70
+      }
+    },
+    {
+      "id": "corpusNeeded",
+      "name": "Corpus Needed Calculator",
+      "modalInputs": [
+        { "id": "currentWealth", "label": "Current Wealth (₹)", "type": "currency" },
+        { "id": "ror", "label": "Rate of Return (%)", "type": "percent" },
+        { "id": "nominalRate", "label": "Nominal Rate (%)", "type": "percent" },
+        { "id": "activeSIP", "label": "Active SIP (₹)", "type": "currency" },
+        { "id": "years", "label": "Years", "type": "number" },
+        { "id": "targetWealth", "label": "Target Wealth (₹)", "type": "currency" }
+      ],
+      "output": {
+        "type": "table",
+        "columns": ["Option", "Lumpsum", "SIP", "Combination"],
+        "rows": [
+          "100% Lumpsum",
+          "100% SIP",
+          "50% SIP & 50% Lumpsum",
+          "40% SIP & 60% Lumpsum"
+        ]
+      }
+    }
+  ]
+}

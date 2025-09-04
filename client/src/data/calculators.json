@@ -1,0 +1,63 @@
+[
+  {
+    "id": "lifeline_calculator",
+    "name": "Lifeline Calculator",
+    "description": "Estimate your financial needs and goals over your lifetime.",
+    "fields": [
+      { "label": "Current Age", "name": "currentAge", "type": "number", "placeholder": "Enter your current age" },
+      { "label": "Life Expectancy", "name": "lifeExpectancy", "type": "number", "placeholder": "Expected life expectancy" },
+      { "label": "Monthly Expenses", "name": "monthlyExpenses", "type": "number", "placeholder": "Enter monthly expenses" }
+    ]
+  },
+  {
+    "id": "salary_saving_calculator",
+    "name": "Salary Saving Calculator",
+    "description": "Plan your monthly savings and optimize salary allocation.",
+    "fields": [
+      { "label": "Monthly Salary", "name": "monthlySalary", "type": "number", "placeholder": "Enter monthly salary" },
+      { "label": "Monthly Expenses", "name": "monthlyExpenses", "type": "number", "placeholder": "Enter monthly expenses" },
+      { "label": "Savings Percentage", "name": "savingsPercentage", "type": "number", "placeholder": "Enter savings percentage" }
+    ]
+  },
+  {
+    "id": "swp_calculator",
+    "name": "SWP Calculator",
+    "description": "Calculate returns and sustainability of Systematic Withdrawal Plans.",
+    "fields": [
+      { "label": "Initial Investment", "name": "initialInvestment", "type": "number", "placeholder": "Enter initial investment amount" },
+      { "label": "Withdrawal Amount", "name": "withdrawalAmount", "type": "number", "placeholder": "Enter withdrawal per month" },
+      { "label": "Expected Annual Return (%)", "name": "annualReturn", "type": "number", "placeholder": "Enter expected return rate" }
+    ]
+  },
+  {
+    "id": "cash_surplus_tracker",
+    "name": "Cash Surplus Tracker",
+    "description": "Track surplus cash flow and optimize investments.",
+    "fields": [
+      { "label": "Monthly Income", "name": "monthlyIncome", "type": "number", "placeholder": "Enter total monthly income" },
+      { "label": "Monthly Expenses", "name": "monthlyExpenses", "type": "number", "placeholder": "Enter total monthly expenses" },
+      { "label": "Surplus Savings", "name": "surplusSavings", "type": "number", "placeholder": "Enter surplus savings amount" }
+    ]
+  },
+  {
+    "id": "seventy_year_projection_calculator",
+    "name": "70 Year Projection Calculator",
+    "description": "Project investments, savings, and wealth growth over 70 years.",
+    "fields": [
+      { "label": "Current Age", "name": "currentAge", "type": "number", "placeholder": "Enter your current age" },
+      { "label": "Annual Investment", "name": "annualInvestment", "type": "number", "placeholder": "Enter annual investment amount" },
+      { "label": "Expected Annual Return (%)", "name": "annualReturn", "type": "number", "placeholder": "Enter expected return rate" }
+    ]
+  },
+  {
+    "id": "corpus_needed_calculator",
+    "name": "Corpus Needed Calculator",
+    "description": "Determine the total corpus required to meet future financial goals.",
+    "fields": [
+      { "label": "Target Goal Amount", "name": "targetGoal", "type": "number", "placeholder": "Enter target goal amount" },
+      { "label": "Years to Goal", "name": "yearsToGoal", "type": "number", "placeholder": "Number of years to goal" },
+      { "label": "Expected Annual Return (%)", "name": "annualReturn", "type": "number", "placeholder": "Enter expected return rate" }
+    ]
+  }
+]
+
